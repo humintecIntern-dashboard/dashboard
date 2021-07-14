@@ -14,4 +14,6 @@ public interface TestDao {
 	public int countTest();
 	public int targetCountTest(TestVo vo);
 	public void selectKeyTest(TestVo vo);
+	
+	public List<TestVo> selectByGroup(TestVo vo);
 }

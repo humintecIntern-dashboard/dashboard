@@ -98,4 +98,37 @@ public class TestController {
 			return "false";
 		}
 	}
+	
+	@GetMapping("/selectByGroup")
+	@Transactional(readOnly = true)
+	public List<TestResponseFormat> selectByGroupTest(@RequestBody TestRequestFormat req) {
+		TestVo vo = new TestVo();
+		List<TestVo> vList = testService.selectByGroup(vo);
+		
+		ArrayList<TestResponseFormat> res = new ArrayList<TestResponseFormat>();
+		
+		for(TestVo target : vList) {
+			res.add(new TestResponseFormat(target));
+		}
+		
+		return res;
+	}
+	
+	@PutMapping("/insertByGroup")
+	@Transactional(readOnly = false)
+	public String insertByGroup(@RequestBody TestRequestFormat req) {
+		TestVo vo = new TestVo();
+		List<TestVo> vList = testService.selectByGroup(vo);
+		
+		for(TestVo target : vList) {
+			if(testService.insert(target) == 0) {
+				
+			}
+			else {
+				return "false";
+			}
+		}
+		
+		return "ok";
+	}
 }

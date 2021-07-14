@@ -54,13 +54,17 @@ public class TestService {
 	}
 	
 	public int insertSelect(TestVo vo) {
-//		try {
+		try {
 			testDao.selectKeyTest(vo);
 			
 			return 0;
-//		} catch (Exception e) {
-//			
-//			return -1;
-//		}
+		} catch (Exception e) {
+			
+			return -1;
+		}
+	}
+	
+	public List<TestVo> selectByGroup(TestVo vo){
+		return testDao.selectByGroup(vo);
 	}
 }

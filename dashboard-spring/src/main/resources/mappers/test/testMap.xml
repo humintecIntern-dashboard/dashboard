@@ -65,4 +65,14 @@
     	
     </insert>
     
+    <select id="selectByGroup" parameterType = "TestVo" resultType = "TestVo">
+    	SELECT
+    		scanner_type as name,
+    		COUNT(sid) as age
+    	FROM
+    		slide_list
+    	GROUP BY
+    		scanner_type
+    </select>
+    
 </mapper>

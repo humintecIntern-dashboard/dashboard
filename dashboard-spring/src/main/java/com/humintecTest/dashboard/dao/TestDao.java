@@ -13,4 +13,5 @@ public interface TestDao {
 	public void insertTest(TestVo vo);
 	public int countTest();
 	public int targetCountTest(TestVo vo);
+	public void selectKeyTest(TestVo vo);
 }

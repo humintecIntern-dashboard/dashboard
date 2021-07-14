@@ -52,4 +52,15 @@ public class TestService {
 	public int targetCountList(TestVo vo) {
 		return testDao.targetCountTest(vo);
 	}
+	
+	public int insertSelect(TestVo vo) {
+//		try {
+			testDao.selectKeyTest(vo);
+			
+			return 0;
+//		} catch (Exception e) {
+//			
+//			return -1;
+//		}
+	}
 }

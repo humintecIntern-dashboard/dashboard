@@ -85,4 +85,17 @@ public class TestController {
 		
 		return testService.targetCountList(vo);
 	}
+	
+	@PutMapping("/selectKeyTest")
+	@Transactional(readOnly = false)
+	public String selectKeyTest(@RequestBody TestRequestFormat req) {
+		TestVo vo = testService.makeVo(req);
+		
+		if(testService.insertSelect(vo) == 0) {
+			return "ok";
+		}
+		else {
+			return "false";
+		}
+	}
 }

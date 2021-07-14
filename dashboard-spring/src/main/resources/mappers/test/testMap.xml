@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.humintecTest.dashboard.dao.TestDao">
+    <select id="selectTestList" parameterType="TestVo" resultType="TestVo">
+        SELECT
+            uid as uid,
+            name as name,
+            date as date,
+            age as age
+       	FROM
+       		test
+    </select>
+    
+    <select id="selectTarget" parameterType = "TestVo" resultType = "testVo">
+    	SELECT
+    		uid as uid,
+    		name as name,
+    		date as date,
+    		age as age
+    	FROM
+    		test
+    	WHERE
+    		name = #{name}
+    </select>
+    
+    <insert id="insertTest" parameterType = "TestVo">
+    	INSERT
+    		into test(uid, name, date, age)
+    	VALUES
+    		(#{uid}, #{name}, #{date}, #{age})
+    	
+    </insert>
+    
+    <select id="countTest" resultType = "int">
+    	SELECT
+    	COUNT(name)
+    	FROM
+    		test
+    </select>
+    
+    <select id="targetCountTest" parameterType = "TestVo" resultType = "int">
+    	SELECT
+    	COUNT(name)
+    	FROM
+    		test
+    	WHERE
+    		name = #{name}
+    </select>
+    
+</mapper>

@@ -56,7 +56,7 @@ export default {
 
 <style>
 html {
-  background-color: #dfdbd2;
+  background-color: #515151;
 }
 
 #app {
@@ -64,7 +64,7 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: right;
-  color: #2c3e50;
+  color: #E1E1E1;
 }
 
 #nav {
@@ -73,7 +73,7 @@ html {
   margin-bottom: 5px;
   width: 100%;
   height: 60px;
-  background-color: #3c3b37;
+  background-color: #2D2D2D;
   box-shadow: 0 1px 3px 0 rgba(0,0,0,0.50);
   border-bottom: 1px solid #eee;
   overflow: hidden;

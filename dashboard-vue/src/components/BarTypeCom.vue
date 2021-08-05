@@ -62,13 +62,16 @@ export default {
         pointBorderColor: '#249EBF'
         },
       change:0,
-      colorset:['#dd4814'],
+      colorset:['rgb(232, 75, 60)'],
       datacollection: {
         labels: null,
         datasets: [
         ]
       },
       chartoptions:{
+          legend: {
+              display: false
+          },
           onClick: this.handleChartClick,
           title: {
             display: true,
@@ -130,15 +133,11 @@ export default {
                   stacked: false
               }],
               xAxes: [ {
-              
                   gridLines: {
                       display: false
                   },
                   stacked: false
               }]
-          },
-          legend: {
-              display: false
           },
           responsive: true,
           maintainAspectRatio: false

@@ -30,7 +30,7 @@ export default {
         datasets: [{
                     label: null,
                     data: null,
-                    backgroundColor: ['#dd4814','#f07746'],
+                    backgroundColor: ['#f07746', 'rgb(232, 75, 60)'],
                     pointBackgroundColor: 'white',
                     borderWidth: 1,
                     pointBorderColor: '#249EBF'

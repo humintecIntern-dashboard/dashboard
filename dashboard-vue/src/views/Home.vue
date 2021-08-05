@@ -37,7 +37,7 @@ export default {
   data() {
     return {
       palette: false,
-      color: '#f87979',
+      color: '#dd4814',
       slide_date:{
         name:"slide-date",
         url:"/selectSlidePerDate",
@@ -130,6 +130,7 @@ export default {
   div {
     width: 100%;
     height: 90%;
+    color: #E1E1E1
   }
 
   .grid {
@@ -142,11 +143,11 @@ export default {
   #static-chart {
     width: 28%;
     height: 100%;
-    background-color: #cac2b1;
+    background-color: #4A4A4A;
   }
   #dynamic-chart {
     width: 72%;
-    background-color: #dfdbd2;
+    background-color: #515151;
   }
   
   #dynamic-chart .chartbox {
@@ -178,7 +179,7 @@ export default {
   button {
   border: 1px solid #3c3b37;
   border-radius: 5px;
-  background-color: #dfdbd2;
+  background-color: #9E9E9E;
   color: #3c3b37;
   padding: 5px;
   }

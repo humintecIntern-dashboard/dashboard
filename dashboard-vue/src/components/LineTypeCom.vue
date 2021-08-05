@@ -192,11 +192,13 @@ export default {
   }
   #param{
     float: left;
-    width: 20%;
+    width: 35%;
+    margin: 2pt;
   }
   #predictDate{
     float: right;
     font-size: 18pt;
+    margin: 2pt;
   }
   #predict{
     float: right;

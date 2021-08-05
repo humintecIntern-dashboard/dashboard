@@ -12,7 +12,6 @@
     </div>
     <div class="margindiv"></div>
     <home :start="startDate" :end="endDate"></home>
-    <!--<router-view :start="startDate" :end="endDate"></router-view>-->
   </div>
 </template>
 
@@ -56,6 +55,10 @@ export default {
 </script>
 
 <style>
+html {
+  background-color: #dfdbd2;
+}
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -66,19 +69,15 @@ export default {
 
 #nav {
   position: fixed;
-  padding: 30px;
+  padding: 15px;
   margin-bottom: 5px;
   width: 100%;
   height: 60px;
-  background-color: rgb(53, 196, 231);
+  background-color: #3c3b37;
   box-shadow: 0 1px 3px 0 rgba(0,0,0,0.50);
   border-bottom: 1px solid #eee;
   overflow: hidden;
 }
-
-/* .check {
-  margin-right: 10px;
-} */
 
 .margindiv {
   height: 60px;

@@ -46,7 +46,7 @@ export default {
         borderColor: '#f87979',
         borderDash:null
         },
-      colorset:['#f87979','#ffd950', '#02bc77', '#28c3d7', '#FF6384'],
+      colorset:['#dd4814','#f07746'],
       datacollection: {
         labels: null,
         datasets: [{

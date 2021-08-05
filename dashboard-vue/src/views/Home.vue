@@ -12,8 +12,8 @@
       </div>
       <div class="form__field">
         <div class="form__label">
-          <strong>Please choose a color:</strong>
-          <v-swatches v-model="color" inline></v-swatches>
+          <strong @click="viewPalette">Coror Palette</strong>
+          <v-swatches v-if="palette==true" v-model="color" inline></v-swatches>
         </div>
       </div>
       <div id="type-chart">
@@ -36,6 +36,7 @@ export default {
   name: 'home',
   data() {
     return {
+      palette: false,
       color: '#f87979',
       slide_date:{
         name:"slide-date",
@@ -107,7 +108,9 @@ export default {
   methods:{
     nameChange(name){
       this.storageName=name;
-
+    },
+    viewPalette() {
+      this.palette = !this.palette
     }
   },
   mounted() {
@@ -138,32 +141,34 @@ export default {
 
   #static-chart {
     width: 28%;
-    background-color: rgb(230, 249, 252);
+    height: 100%;
+    background-color: #cac2b1;
   }
   #dynamic-chart {
     width: 72%;
+    background-color: #dfdbd2;
   }
   
   #dynamic-chart .chartbox {
-  width: 460px;
-  height: 460px;
-  display: inline-block;
-  margin: 0 30px 30px 30px;
-  overflow: hidden;
-  border: 1px solid rgb(53, 196, 231);
-  border-radius: 10px;
-  /* float: left; */
+    width: 460px;
+    height: 460px;
+    display: inline-block;
+    margin: 0 30px 30px 30px;
+    overflow: hidden;
+    /* border: 1px solid rgb(53, 196, 231); */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
   }
 
   #static-chart .chartbox {
-  width: 360px;
-  height: 280px;
-  display: inline-block;
-  margin: 0 15px 50px 15px;
-  overflow: hidden; 
-  border: 1px solid rgb(53, 196, 231);
-  border-radius: 10px;
-  /* float: left; */
+    width: 360px;
+    height: 280px;
+    display: inline-block;
+    margin: 5px 15px 45px 15px;
+    overflow: hidden; 
+    /* border: 1px solid rgb(53, 196, 231); */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
   }
 
   #static-chart .for-size {
@@ -171,16 +176,16 @@ export default {
     height: 280px;
   }
   button {
-  border: 1px solid skyblue;
+  border: 1px solid #3c3b37;
   border-radius: 5px;
-  background-color: white;
-  color: skyblue;
+  background-color: #dfdbd2;
+  color: #3c3b37;
   padding: 5px;
   }
 
   button:hover {
     color: white;
-    background-color: skyblue;
+    background-color: #3c3b37;
   }
 
   @media screen and (max-width: 1530px) {

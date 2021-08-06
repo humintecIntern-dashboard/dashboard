@@ -13,7 +13,7 @@
       <div class="form__field">
         <div class="form__label">
           <strong @click="viewPalette">Coror Palette</strong>
-          <v-swatches v-if="palette==true" v-model="color" inline></v-swatches>
+          <v-swatches v-if="palette==true" v-model="color" inline background-color='#B1B1B1'></v-swatches>
         </div>
       </div>
       <div id="type-chart">
@@ -127,6 +127,10 @@ export default {
 </script>
 
 <style>
+  .vue-swatches__wrapper {
+    background-color: #515151;
+  }
+
   div {
     width: 100%;
     height: 90%;

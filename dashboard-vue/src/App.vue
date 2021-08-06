@@ -18,6 +18,10 @@
 <script>
 import home from "./views/Home.vue"
 import moment from 'moment'
+import { Chart } from 'chart.js'
+Chart.defaults.global.defaultFontColor = '#B1B1B1';
+Chart.defaults.global.defaultColor = '#B1B1B1';
+
 export default {
   components: {
     home

@@ -84,13 +84,15 @@ export default {
                       max: 100
                   },
                   gridLines: {
-                      display: true
+                      display: true,
+                      color: "#B1B1B1"
                   },
               }],
               xAxes: [ {
               
                   gridLines: {
-                      display: false
+                      display: false,
+                      color: "#B1B1B1"
                   },
               }]
           },

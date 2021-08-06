@@ -128,13 +128,15 @@ export default {
                       }
                   },
                   gridLines: {
-                      display: true
+                      display: true,
+                      color: "#B1B1B1"
                   },
                   stacked: false
               }],
               xAxes: [ {
                   gridLines: {
-                      display: false
+                      display: false,
+                      color: "#B1B1B1"
                   },
                   stacked: false
               }]

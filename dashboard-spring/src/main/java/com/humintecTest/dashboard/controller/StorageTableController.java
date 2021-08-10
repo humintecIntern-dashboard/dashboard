@@ -56,7 +56,7 @@ public class StorageTableController {
         return "ok";
     }
 
-    @PostMapping("/selectStorageTableById") //스토리지 별 일일 사용량 추이 계산
+    /*@PostMapping("/selectStorageTableById") //스토리지 별 일일 사용량 추이 계산
     @Transactional(readOnly = true)
     @CrossOrigin("*")
     public List<storageTableResponseFormat> selectStorageTableById (@RequestBody StorageTableRequestFormat req )
@@ -160,7 +160,7 @@ public class StorageTableController {
             res.add(new storageTableResponseFormat(target));
         }
         return res;
-    }
+    }*/
 
     @PutMapping("/updateStorageTable")
     @Transactional(readOnly = false)

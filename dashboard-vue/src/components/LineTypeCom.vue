@@ -3,6 +3,19 @@
     <div id="filter">
     <input id="param" type="Number" min=1 v-model="maN"/>
     <span id="predict">용량 초과 예정일: {{predictDate}}</span>
+    <button type="button" id = "modalBtn" class=btn btn-info btn-lg data-toggle="modal" data-target="#chartModal">확대</button>
+    <div class ="modal fade" id="chartModal" role="dialog">
+      <div class = "modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <div id="chartContainer" style="height: 360px; width:100%;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
     </div>
     <div id="chart">
     <line-chart :datacollection="datacollection" :options="chartoptions" :change="change" @rerendered="reset"></line-chart>
@@ -189,6 +202,16 @@ export default {
   #filter {
     font-size: 10pt;
      height:10%
+  }
+  #modal {
+    font-size: 1pt;
+    height:15%
+  }
+  #show-modal {
+    float : right;
+    width: 15%;
+    height : 5%;
+    margin: 5px;
   }
   #param{
     float: left;

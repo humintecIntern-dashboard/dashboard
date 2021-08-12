@@ -64,12 +64,11 @@ export default {
 }
 
 #nav {
-  position: fixed;
   padding: 15px;
   margin-bottom: 5px;
   width: 100%;
   height: 60px;
-  background-color: rgb(53, 196, 231);
+  background-color: rgb(136, 136, 143);
   box-shadow: 0 1px 3px 0 rgba(0,0,0,0.50);
   border-bottom: 1px solid #eee;
   overflow: hidden;

@@ -27,8 +27,8 @@
     <Modal v-if="showModal" :query="storage_full" :storageName="storageName" @close="showModal = false">
       <transition name="modal">
     <div class="modal-mask">
-      <div class="modal-wrapper">
-        <div class="modal-container">
+      <div class="modal-wrapper" @click="showModal=false">
+        <div class="modal-container" @click.stop="">
 
           <div class="modal-header">
             <slot name="header">
@@ -45,9 +45,7 @@
           <div class="modal-footer">
             <slot name="footer">
               
-              <button class="modal-default-button" @click="showModal=false">
-                종료
-              </button>
+              
             </slot>
           </div>
         </div>
@@ -267,6 +265,7 @@ export default {
 }
 
 .modal-default-button {
+  background-color: rgb(199, 208, 211);
   float: right;
 }
 

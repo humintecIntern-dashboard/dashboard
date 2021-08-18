@@ -13,14 +13,14 @@
           <div class="modal-body">
             <slot name="body">
               <line-type-com id="storage-full" :query="query" :storageName="storageName"></line-type-com>
+              <button class="modal-default-button" @click="console.log($emit('close'))">
+                종료
+              </button>
             </slot>
           </div>
 
           <div class="modal-footer">
             <slot name="footer">
-              <button class="modal-default-button" @click="console.log($emit('close'))">
-                종료
-              </button>
             </slot>
           </div>
         </div>

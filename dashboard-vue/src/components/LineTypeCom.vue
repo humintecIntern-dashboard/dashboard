@@ -212,16 +212,20 @@ export default {
     height:10%
   }
   #MA{
+    position: relative;
     float: left;
     width: 30%;
   }
   #param{
+    position: left;
     width: 17%;
     margin: 5px 5px 0 5px;
     border: 1px solid #eee !important;
     box-shadow: 0 1px 3px 0 rgba(0,0,0,0.50);
   }
   #predict{
+    position: relative;
+    right: 20px;
     margin-top:7px;
     float: right;
     width: 66%;
@@ -232,18 +236,16 @@ export default {
     margin: 0 0 20px 0;
   }
   .modal-container{
+    position: relative;
     height:100%;
   }
   .modal-header{
     height:0%;
   }
   .modal-body{
+    border-radius: 10px;
     background-color: rgb(255, 255, 255);
     height: 40%;
-  }
-  .modal-footer{
-    background-color: rgb(255, 255, 255);
-    height: 10%;
   }
 </style>
 

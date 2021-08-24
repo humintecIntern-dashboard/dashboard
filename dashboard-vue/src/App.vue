@@ -1,21 +1,17 @@
 <template>
   <v-app>
   <div id="app">
-    <div id="nav"> <!--네비게이션 바 시작-->
+    <div id="nav">
       <div class="title">
         <div class="main">
-        <strong class="tit">
-          <img src = "./data/humintec.jpg" alt="">
-        </strong>
+        <strong class="tit">DashBoard</strong>
         </div>
         <div class="sub">
-          <h2>
-            DashBoard Service
-          </h2>
+          <h2>Scanning Service</h2>
         </div>
       </div>
       <div class="datePicker">
-        <div class="recent"><!--최근데이터 불러오기 버튼 "v-" 붙은 태그는 vuetify 프레임워크의 ui 컴포넌트이며 v-btn의 elevation은 버튼의 그림자 정도에 대한 속성-->
+        <div class="recent">
           <div >
             <v-btn elevation="3" small @click="aYearAgo" style="margin: 0 12px 0 0;">
             일 년
@@ -28,7 +24,7 @@
             </v-btn>
           </div>
         </div>
-        <div class="range"><!-- 날짜 입력 -->
+        <div class="range">
             <input type="date" id='start-date' value=startDate/ style="margin-top: 1px ;">
             <strong>~</strong>
             <input type="date" id='end-date' value=endDate/ style="margin: 1px 8px 0 5px ;">
@@ -37,8 +33,8 @@
             </v-btn>
         </div>
       </div>
-    </div> <!--네비게이션 바 끝-->
-    <div class="margindiv"></div> <!-- 여백 생성-->
+    </div>
+    <div class="margindiv"></div>
     <home :start="startDate" :end="endDate"></home>
   </div>
   </v-app>
@@ -46,7 +42,7 @@
 
 <script>
 import home from "./views/Home.vue"
-import moment from 'moment' //날짜 계산 라이브러리
+import moment from 'moment'
 export default {
   components: {
     home
@@ -58,25 +54,31 @@ export default {
     }
   },
   methods: {
-    setDate() { //돋보기 아이콘 버튼 클릭시 실행되며 startDate, endDate를 입력받은 값으로 변경
+    setDate() {
       this.startDate = document.querySelector("#start-date").value;
       this.endDate = document.querySelector("#end-date").value;
     },
-    aYearAgo() {// 최근 1년으로 날짜 설정 
+    aYearAgo() {
       this.endDate = moment().format('YYYY-MM-DD')
       this.startDate = moment().subtract(1,'years').format('YYYY-MM-DD')
+      document.querySelector("#end-date").value=this.endDate;
+      document.querySelector("#start-date").value=this.startDate;
     },
-    aMonthAgo(){// 최근 한달로 날짜 설정
+    aMonthAgo(){
       this.endDate = moment().format('YYYY-MM-DD')
       this.startDate = moment().subtract(1,'months').format('YYYY-MM-DD')
+      document.querySelector("#end-date").value=this.endDate;
+      document.querySelector("#start-date").value=this.startDate;
     },
-    setToday(){// 오늘로 날짜 설정
+    setToday(){
       this.startDate = moment().format('YYYY-MM-DD')
       this.endDate = moment().format('YYYY-MM-DD')
+      document.querySelector("#end-date").value=this.endDate;
+      document.querySelector("#start-date").value=this.startDate;
     }
   },
-  mounted(){ // 인스턴스 마운트시 실행되는 영역 
-    setTimeout(this.setToday,100); // 초기 시작일과 끝일은 null로 설정 되어있기에 마운트시 오늘로 설정해주는 함수 실행
+  mounted(){
+    setTimeout(this.setToday,100);
   }
 }
 </script>
@@ -104,13 +106,6 @@ export default {
   z-index: 2;
 }
 
-img {
-  position: relative;
-  bottom: 12px;
-  height: auto;
-  
-}
-
 .margindiv {
   height: 60px;
 }
@@ -131,10 +126,6 @@ img {
   width: 70%;
 }
 h2{
-  position: relative;
-  bottom: 12px;
-  left : 200px;
-  font-size:xx-large;
   float: left;
 }
 .datePicker{
